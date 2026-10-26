@@ -2,7 +2,7 @@ name: WoW Forever Countdown
 
 on:
   schedule:
-      - cron: '* * * * *'
+      - cron: '*/5 * * * *'
   workflow_dispatch:
     inputs:
       bootstrap:
