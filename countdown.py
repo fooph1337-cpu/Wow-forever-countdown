@@ -111,6 +111,13 @@ def publish(image, create):
         url += f"/{message}"
 
     timestamp = int(TARGET.timestamp())
+    now = int(datetime.now().timestamp())
+    remaining = max(0, timestamp - now)
+
+    days, remainder = divmod(remaining, 86400)
+    hours, remainder = divmod(remainder, 3600)
+    minutes = remainder // 60
+
     payload = {
         "content": (
             f"⚔️ WoW Forever startet: <t:{timestamp}:F>\n⏳ Noch <t:{timestamp}:R> bis zum Launch!"
