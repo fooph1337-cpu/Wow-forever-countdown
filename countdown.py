@@ -113,7 +113,7 @@ def publish(image, create):
     timestamp = int(TARGET.timestamp())
     payload = {
         "content": (
-            f"Launch: <t:{timestamp}:F> — <t:{timestamp}:R>"
+            f"⚔️ WoW Forever startet: <t:{timestamp}:F>\n⏳ Noch <t:{timestamp}:R> bis zum Launch!"
         ),
         "allowed_mentions": {"parse": []},
         "attachments": [
