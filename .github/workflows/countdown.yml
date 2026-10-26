@@ -49,9 +49,9 @@ jobs:
           set -e
           if [ "$BOOTSTRAP" = "true" ]; then
             python countdown.py --create
-          else
-            for update in 1 2 3 4 5; do
-              python countdown.py
+                    else
+            python countdown.py
+          fi
               if [ "$update" -lt 5 ]; then
                 sleep 60
               fi
