@@ -5,6 +5,7 @@ import os
 import time
 from datetime import datetime, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import requests
 from PIL import Image, ImageDraw, ImageFont
@@ -69,7 +70,7 @@ def render(now):
 
     for index, (value, label) in enumerate(zip(
         [days, hours, minutes],
-        ["DAYS", "HOURS", "MINUTES"],
+        ["TAGE", "STUNDEN", "MINUTEN"],
     )):
         left = 185 + index * 218
 
@@ -87,7 +88,7 @@ def render(now):
     slogan = "FOR AZEROTH!" if now < TARGET else "THE WAIT IS OVER!"
     text(slogan, 411, 21, "#D4AF67")
 
-    updated = now.strftime("%H:%M UTC")
+    updated = now.astimezone(ZoneInfo("Europe/Berlin")).strftime("%H:%M MEZ")
     text(
         f"AKTUALISIERUNG ALLE 5 MINUTEN · LETZTES UPDATE {updated}",
         448, 11, "#8ECADD",
