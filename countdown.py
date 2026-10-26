@@ -120,12 +120,10 @@ def publish(image, create):
 
     payload = {
         "content": (
-            f"⚔️ WoW Forever startet: <t:{timestamp}:F>\n⏳ Noch <t:{timestamp}:R> bis zum Launch!"
+    f"⚔️ WoW Forever startet: <t:{timestamp}:F>\n"
+    f"⏳ Noch {days} Tage, {hours} Stunden und "
+    f"{minutes} Minuten bis zum Launch!"
         ),
-        "allowed_mentions": {"parse": []},
-        "attachments": [
-            {"id": 0, "filename": "countdown.png"}
-        ],
     }
 
     for attempt in range(3):
