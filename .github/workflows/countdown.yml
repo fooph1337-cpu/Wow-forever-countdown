@@ -47,8 +47,8 @@ jobs:
           BOOTSTRAP: ${{ inputs.bootstrap }}
         run: |
           set -e
-            if [ "$BOOTSTRAP" = "true" ]; then
-              python countdown.py --create
-            else
-              python countdown.py
+          if [ "$BOOTSTRAP" = "true" ]; then
+            python countdown.py --create
+          else
+            python countdown.py
           fi
