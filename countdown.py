@@ -58,7 +58,7 @@ def render(now):
         )
 
     text(
-        "NOVEMBER 4, 2026 · 6:00 PM EST",
+        "05. NOVEMBER 2026 · 00:00 UHR MEZ",
         230, 19, "#D4AF67",
     )
 
@@ -89,7 +89,7 @@ def render(now):
 
     updated = now.strftime("%H:%M UTC")
     text(
-        f"REFRESHES ABOUT EVERY MINUTE · UPDATED {updated}",
+        f"AKTUALISIERUNG ALLE 5 MINUTEN · LETZTES UPDATE {updated}",
         448, 11, "#8ECADD",
     )
 
